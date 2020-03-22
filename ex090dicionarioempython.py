@@ -1,11 +1,12 @@
 #Exercício Python 090: Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo da estrutura na tela
 aluno = dict()
-aluno['nome'] = str(input('Nome: '))
+aluno['Nome'] = str(input('Nome: '))
 print(aluno)
-aluno['media'] = float(input('Media: '))
-if aluno['media'] >= 7:
-    aluno['situacao'] = 'Aprovado'
+aluno['Média'] = float(input('Media: '))
+if aluno['Média'] >= 7:
+    aluno['Situação'] = 'Aprovado'
 else:
-    aluno['situacao'] = 'Reprovado'
+    aluno['Situação'] = 'Reprovado'
 
-print(aluno)
+for chave in aluno:
+    print(f'{chave} é {aluno[chave]}')
