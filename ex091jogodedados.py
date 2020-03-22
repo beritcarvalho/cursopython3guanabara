@@ -20,5 +20,5 @@ print('\nRanking dos jogadores: ')
 
 ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
 
-for c in range(0,len(ranking)):
-    print(f'{c+1}° lugar: {ranking[c][0]} com {ranking[c][1]}') 
+for posicao, valor in enumerate(ranking):
+    print(f'{posicao+1}° lugar: {valor[0]} com {valor[1]}')
