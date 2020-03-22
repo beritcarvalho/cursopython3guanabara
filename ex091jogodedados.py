@@ -17,7 +17,7 @@ for chave,valor in jogo.items():
 
 
 print('\nRanking dos jogadores: ')
-ranking = dict()
+
 ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
 
 for c in range(0,len(ranking)):
