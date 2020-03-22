@@ -15,4 +15,4 @@ if ctps > 0:
     cadastro['aposentadoria'] = (cadastro['contratação']-ano_nascimento)+35
 
 for c,v in cadastro.items():
-    print(f'  - {c} tem o valorde {v}')
+    print(f'  - {c} tem o valor de {v}')
