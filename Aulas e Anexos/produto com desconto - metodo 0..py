@@ -1,0 +1,7 @@
+val = float (input('Digite o valor do produto: '))
+per = float (input ('Digite percentual de desconto: '))
+des = (val*(per/100))
+tot = val*((100-per)/100)
+print ('Voce fez {}% de desconto'.format (per))
+print ('total de desconto R${:.2f}'.format(des))
+print ('Valor do produto com desconto R${:.2f}'.format (tot))
