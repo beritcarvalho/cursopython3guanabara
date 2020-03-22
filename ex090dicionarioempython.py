@@ -2,11 +2,12 @@
 aluno = dict()
 aluno['Nome'] = str(input('Nome: '))
 print(aluno)
-aluno['Média'] = float(input('Media: '))
-if aluno['Média'] >= 7:
+aluno['Media'] = float(input('Media: '))
+if aluno['Media'] >= 7:
     aluno['Situação'] = 'Aprovado'
 else:
     aluno['Situação'] = 'Reprovado'
 
-for chave in aluno:
-    print(f'{chave} é {aluno[chave]}')
+for chave,valor in aluno.items():
+    print(f'{chave} é {valor}')
+
