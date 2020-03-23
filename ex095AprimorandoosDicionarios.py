@@ -22,12 +22,15 @@ while True:
     gols.clear()
     jogador.clear()
 
-    resp = str(input('Quer continuar? [S/N] '))
-    while resp != 'S' and resp != 's' and resp != 'N' and resp != 'n':
-        print('ERRO! Apenas S ou N')
-        resp = str(input('Quer continuar? [S/N] '))
-    if resp in 'nN':
+    while True:
+        resp = str(input('Quer continuar? [S/N] ')).upper()
+        if resp[0] not in 'SN':
+            print('ERRO! Apenas S ou N')
+        else:
+            break
+    if resp[0] == 'N':
         break
+
 
 #segunda parte dados do jogador
 cod = 'cod'
@@ -48,13 +51,12 @@ print(50*'-')
 #ultima parte
 while True:
     escolha = int(input('Mostrar dados de qual jogador? (999 para parar) ')) 
-    while escolha >= len(time) and escolha != 999:
-        print(f'ERRO! Não existe jogador com código {escolha}')
-        escolha = int(input('Mostrar dados de qual jogador? (999 para parar) '))
-    
     if escolha == 999:
         break
-
-    print(' -- LEVANTAMENTO DO JOGADOR %s:' % time[escolha]['nome'])
-    for pos,gol in enumerate(time[escolha]['gols']):
-        print(f'    No jogo {pos+1} fez {gol} gols.')
+    if escolha >= len(time):
+        print(f'ERRO! Não existe jogador com código {escolha}')
+    else:
+        print(' -- LEVANTAMENTO DO JOGADOR %s:' % time[escolha]['nome'])
+        for pos,gol in enumerate(time[escolha]['gols']):
+            print(f'    No jogo {pos+1} fez {gol} gols.')
+print('<<VOLTE SEMPRE>>')
